@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: obd-0725 
+  description: Secure Supply Chain Example for AI enabled Object Detection Application example using DEtection TRansformer(DETR) model to detect objects in an image   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=obd-0725  
+    janus-idp.io/tekton: obd-0725 
+    backstage.io/kubernetes-id: obd-0725 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: yangcao/obd-0725
+  tags: ["ai", "detr", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
